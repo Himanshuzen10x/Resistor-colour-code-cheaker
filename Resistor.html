@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Resistor.css">
+
+</head>
+<body>
+    <div class="containerr">
+        <h1 id="h11">Resistor Color Code Tester</h1>
+        
+        <img id="img" src="http://www.robotsforfun.com/images/resistor150.png" alt="">
+        <div class="input-container">
+            <label for="first-band">1st Band (1st Digit)</label>
+            <select id="first-band" onchange="calculateresistance()">
+              <option value="0" style="background-color: black;">Black</option>
+              <option value="1" style="background-color: brown;">Brown</option>
+              <option value="2" style="background-color: red;">Red</option>
+              <option value="3" style="background-color: orange;">Orange</option>
+              <option value="4" style="background-color: yellow;">Yellow</option>
+              <option value="5" style="background-color: green;">Green</option>
+              <option value="6" style="background-color: blue;">Blue</option>
+              <option value="7" style="background-color: #7F00FF;">Violet</option>
+              <option value="8" style="background-color: gray;">Gray</option>
+              <option value="9" style="background-color: white;">White</option>            </select>
+            <label for="second-band">2nd Band (2nd Digit)</label>
+            <select id="second-band" onchange="calculateresistance()">
+              <option value="0" style="background-color: black;">Black</option>
+              <option value="1" style="background-color: brown;">Brown</option>
+              <option value="2" style="background-color: red;">Red</option>
+              <option value="3" style="background-color: orange;">Orange</option>
+              <option value="4" style="background-color: yellow;">Yellow</option>
+              <option value="5" style="background-color: green;">Green</option>
+              <option value="6" style="background-color: blue;">Blue</option>
+              <option value="7" style="background-color: #7F00FF;">Violet</option>
+              <option value="8" style="background-color: gray;">Gray</option>
+              <option value="9" style="background-color: white;">White</option>            </select>
+            <label for="multiplier-band">Multiplier (Multiplier)</label>
+            <select id="multiplier-band" onchange="calculateresistance()">
+              <option value="1" style="background-color: black;">Black</option>
+              <option value="10" style="background-color: brown;">Brown 10</option>
+              <option value="100" style="background-color: red;">Red 10^2</option>
+              <option value="1000" style="background-color: orange;">Orange 10^3</option>
+              <option value="10000" style="background-color: yellow;">Yellow 10^4</option>
+              <option value="100000" style="background-color: green;">Green 10^5</option>
+              <option value="1000000" style="background-color: blue;">Blue 10^6</option>
+              <option value="10000000" style="background-color: #7F00FF;">Violet 10^7</option>
+              <option value="100000000" style="background-color: gray;">Gray 10^8</option>
+              <option value="1000000000" style="background-color: white;">White 10^9</option>            </select>
+            <label for="tolerance-band">Tolerance (Tolerance)</label>
+            <select id="tolerance-band" onchange="calculateresistance()">
+              <option value="20" style="background-color: black;" data-color="#000000">Black</option>
+              <option value="10" style="background-color: brown;" data-color="#964B00">Brown</option>
+              <option value="5" style="background-color: red;" data-color="#FF0000">Red</option>
+              <option value="2" style="background-color: orange;" data-color="#FFA500">Orange</option>
+              <option value="1" style="background-color: yellow;" data-color="#FFFF00">Yellow</option>
+              <option value="0.5" style="background-color: green;" data-color="#008000">Green</option>
+              <option value="0.25" style="background-color: blue;" data-color="#0000FF">Blue</option>
+              <option value="0.1" style="background-color: #7F00FF;" data-color="#7F00FF">Violet</option>
+              <option value="0.05" style="background-color: gray;" data-color="#808080">Gray</option>
+              <option value="0.02" style="background-color: white;" data-color="#FFFFFF">White</option>
+              <option value="5" style="background-color: gold;" data-color="#FFD700">Gold</option>
+              <option value="10" style="background-color: silver;" data-color="#C0C0C0">Silver</option>
+          </select>
+          
+        </div>
+        <div id="resistor">
+            <div id="lead-leftt"></div>
+
+            <div id="lead-left"></div>
+            <div class="band" id="band1"></div>
+            <div class="band" id="band2"></div>
+            <div class="band" id="band3"></div>
+            <div class="band" id="band4"></div>
+            <div id="lead-right"></div>
+            <div id="lead-rightt"></div>
+
+        </div>
+        <div id="result"></div>
+        <script src="Resistor.js"></script>
+</body>
+</html>
